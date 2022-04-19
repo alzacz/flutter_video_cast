@@ -26,6 +26,7 @@ class ChromeCastController(
     private val sessionManager = CastContext.getSharedInstance()?.sessionManager
 
     init {
+        chromeCastButton.setAlwaysVisible(true)
         CastButtonFactory.setUpMediaRouteButton(context, chromeCastButton)
         channel.setMethodCallHandler(this)
     }
